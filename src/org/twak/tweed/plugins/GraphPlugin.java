@@ -53,4 +53,7 @@ public class GraphPlugin implements TweedPlugin {
 			} );
 		}
 	}
+
+	@Override
+	public void addToNewScene( TweedFrame instance ) {}
 }
