@@ -48,12 +48,12 @@
 									<mainClass>org.twak.tweed.TweedFrame</mainClass>
 									<manifestEntries>
 										<!-- jai sob -->
-										<Specification-Vendor>chordatlas</Specification-Vendor>
-										<Specification-Title>chordatlas</Specification-Title>
+										<Specification-Vendor>tweedstreets</Specification-Vendor>
+										<Specification-Title>tweedstreets</Specification-Title>
 										<Specification-Version>${project.version}</Specification-Version>
-										<Implementation-Vendor-Id>chordatlas</Implementation-Vendor-Id>
-										<Implementation-Vendor>chordatlas</Implementation-Vendor>
-										<Implementation-Title>chordatlas</Implementation-Title>
+										<Implementation-Vendor-Id>tweedstreets</Implementation-Vendor-Id>
+										<Implementation-Vendor>tweedstreets</Implementation-Vendor>
+										<Implementation-Title>tweedstreets</Implementation-Title>
 										<Implementation-Version>${project.version}</Implementation-Version>
 									</manifestEntries>
 								</transformer>
@@ -222,6 +222,6 @@
 		<name>chordatlas</name>
 		<url>http://geometry.cs.ucl.ac.uk/projects/2017/bigsur/</url>
 	</organization>
-	<name>chordatlas</name>
+	<name>tweedstreets</name>
 	<url>http://geometry.cs.ucl.ac.uk/projects/2017/bigsur/</url>
 </project>
