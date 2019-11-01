@@ -36,7 +36,8 @@
     <orderEntry type="library" name="Maven: org.apache.xmlgraphics:batik-transcoder:1.10" level="project" />
     <orderEntry type="library" name="Maven: org.apache.xmlgraphics:batik-anim:1.10" level="project" />
     <orderEntry type="module" module-name="siteplan" />
-    <orderEntry type="module" module-name="campskeleton" />
+    <orderEntry type="library" name="Maven: com.github.twak:jutils:master-f13b77f8a2-1" level="project" />
+    <orderEntry type="library" name="Maven: com.github.twak:campskeleton:master-5186f68eb0-1" level="project" />
     <orderEntry type="module" module-name="chordatlas" />
     <orderEntry type="library" name="Maven: redis.clients:jedis:2.8.1" level="project" />
     <orderEntry type="library" name="Maven: org.apache.commons:commons-pool2:2.4.2" level="project" />
@@ -52,6 +53,7 @@
     <orderEntry type="library" name="Maven: com.fasterxml.jackson.core:jackson-core:2.9.9" level="project" />
     <orderEntry type="library" name="Maven: com.fasterxml.jackson.core:jackson-databind:2.9.9" level="project" />
     <orderEntry type="library" name="Maven: com.fasterxml.jackson.core:jackson-annotations:2.9.0" level="project" />
+    <orderEntry type="library" name="Maven: com.github.twak:siteplan:master-86a2e0c1ce-1" level="project" />
     <orderEntry type="library" name="Maven: javax.vecmath:vecmath:1.5.2" level="project" />
     <orderEntry type="library" name="Maven: org.geotools:gt-xml:19.1" level="project" />
     <orderEntry type="library" name="Maven: org.geotools:gt-api:19.1" level="project" />
