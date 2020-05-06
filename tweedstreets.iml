@@ -8,8 +8,9 @@
       <sourceFolder url="file://$MODULE_DIR$/resources" type="java-resource" />
       <excludeFolder url="file://$MODULE_DIR$/target" />
     </content>
-    <orderEntry type="inheritedJdk" />
+    <orderEntry type="jdk" jdkName="13" jdkType="JavaSDK" />
     <orderEntry type="sourceFolder" forTests="false" />
+    <orderEntry type="library" name="Maven: com.github.twak:jutils:master-f13b77f8a2-1" level="project" />
     <orderEntry type="module" module-name="utils" />
     <orderEntry type="library" name="Maven: gov.nist.math:jama:1.0.3" level="project" />
     <orderEntry type="library" name="Maven: org.apache.xmlgraphics:batik-svg-dom:1.10" level="project" />
@@ -36,7 +37,7 @@
     <orderEntry type="library" name="Maven: org.apache.xmlgraphics:batik-transcoder:1.10" level="project" />
     <orderEntry type="library" name="Maven: org.apache.xmlgraphics:batik-anim:1.10" level="project" />
     <orderEntry type="module" module-name="siteplan" />
-    <orderEntry type="library" name="Maven: com.github.twak:jutils:master-f13b77f8a2-1" level="project" />
+    <orderEntry type="library" name="Maven: com.github.twak:jutils:master-c73049f7b1-1" level="project" />
     <orderEntry type="library" name="Maven: com.github.twak:campskeleton:master-5186f68eb0-1" level="project" />
     <orderEntry type="module" module-name="chordatlas" />
     <orderEntry type="library" name="Maven: redis.clients:jedis:2.8.1" level="project" />
