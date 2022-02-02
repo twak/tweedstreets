@@ -92,6 +92,67 @@
 		</resources>
 	</build>
 
+	<profiles>
+		<profile>
+			<id>release</id>
+			<activation>
+				<activeByDefault>true</activeByDefault>
+			</activation>
+
+			<repositories>
+				<repository>
+					<id>jitpack.io</id>
+					<url>https://jitpack.io</url>
+				</repository>
+			</repositories>
+
+			<dependencies>
+				<dependency>
+					<groupId>com.github.twak</groupId>
+					<artifactId>jutils</artifactId>
+					<version>master-SNAPSHOT</version>
+				</dependency>
+
+				<dependency>
+					<groupId>com.github.twak</groupId>
+					<artifactId>siteplan</artifactId>
+					<version>master-SNAPSHOT</version>
+				</dependency>
+
+				<dependency>
+					<groupId>com.github.twak</groupId>
+					<artifactId>chordatlas</artifactId>
+					<version>master-SNAPSHOT</version>
+				</dependency>
+			</dependencies>
+
+		</profile>
+		<profile>
+			<id>dev</id>
+
+			<dependencies>
+				<dependency>
+					<groupId>org.twak.utils</groupId>
+					<artifactId>utils</artifactId>
+					<version>0.0.1-SNAPSHOT</version>
+				</dependency>
+
+				<dependency>
+					<groupId>org.twak.siteplan</groupId>
+					<artifactId>siteplan</artifactId>
+					<version>0.0.1-SNAPSHOT</version>
+				</dependency>
+
+				<dependency>
+					<groupId>org.twak.chordatlas</groupId>
+					<artifactId>chordatlas</artifactId>
+					<version>0.0.1-SNAPSHOT</version>
+				</dependency>
+
+			</dependencies>
+		</profile>
+	</profiles>
+
 	<repositories>
 
 		<repository>
@@ -123,24 +184,6 @@
 	</properties>
 
 	<dependencies>
-
-		<dependency>
-			<groupId>org.twak.utils</groupId>
-			<artifactId>utils</artifactId>
-			<version>0.0.1-SNAPSHOT</version>
-		</dependency>
-
-		<dependency>
-			<groupId>org.twak.siteplan</groupId>
-			<artifactId>siteplan</artifactId>
-			<version>0.0.1-SNAPSHOT</version>
-		</dependency>
-
-		<dependency>
-			<groupId>org.twak.chordatlas</groupId>
-			<artifactId>chordatlas</artifactId>
-			<version>0.0.1-SNAPSHOT</version>
-		</dependency>
 
 		<dependency>
 			<groupId>javax.vecmath</groupId>
