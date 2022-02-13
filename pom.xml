@@ -1,5 +1,5 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+		 xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>org.twak.tweedstreets</groupId>
 	<artifactId>tweedstreets</artifactId>
@@ -7,7 +7,6 @@
 	<build>
 		<sourceDirectory>src</sourceDirectory>
 		<plugins>
-
 
 			<!-- fix geotools issue in /META-INF/services/org.opengis.referencing.crs.CRSAuthorityFactory  ...  see bottom of here http://docs.geotools.org/stable/userguide/faq.html-->
 			<plugin>
@@ -36,24 +35,24 @@
 							</filters>
 							<transformers>
 								<transformer
-									implementation="org.apache.maven.plugins.shade.resource.AppendingTransformer">
+										implementation="org.apache.maven.plugins.shade.resource.AppendingTransformer">
 									<resource>META-INF/services/org.opengis.referencing.crs.CRSAuthorityFactory</resource>
 								</transformer>
 
 								<transformer
-									implementation="org.apache.maven.plugins.shade.resource.ServicesResourceTransformer" />
+										implementation="org.apache.maven.plugins.shade.resource.ServicesResourceTransformer" />
 
 								<transformer
-									implementation="org.apache.maven.plugins.shade.resource.ManifestResourceTransformer">
+										implementation="org.apache.maven.plugins.shade.resource.ManifestResourceTransformer">
 									<mainClass>org.twak.tweed.TweedFrame</mainClass>
 									<manifestEntries>
 										<!-- jai sob -->
-										<Specification-Vendor>tweedstreets</Specification-Vendor>
-										<Specification-Title>tweedstreets</Specification-Title>
+										<Specification-Vendor>chordatlas</Specification-Vendor>
+										<Specification-Title>chordatlas</Specification-Title>
 										<Specification-Version>${project.version}</Specification-Version>
-										<Implementation-Vendor-Id>tweedstreets</Implementation-Vendor-Id>
-										<Implementation-Vendor>tweedstreets</Implementation-Vendor>
-										<Implementation-Title>tweedstreets</Implementation-Title>
+										<Implementation-Vendor-Id>chordatlas</Implementation-Vendor-Id>
+										<Implementation-Vendor>chordatlas</Implementation-Vendor>
+										<Implementation-Title>chordatlas</Implementation-Title>
 										<Implementation-Version>${project.version}</Implementation-Version>
 									</manifestEntries>
 								</transformer>
@@ -63,10 +62,10 @@
 				</executions>
 			</plugin>
 
-			<!-- replaced by shade <plugin> <artifactId>maven-assembly-plugin</artifactId> 
-				<configuration> <archive> <manifest> <mainClass>org.twak.tweed.TweedFrame</mainClass> 
-				<addDefaultImplementationEntries>true</addDefaultImplementationEntries> <addDefaultSpecificationEntries>true</addDefaultSpecificationEntries> 
-				</manifest> </archive> <descriptorRefs> <descriptorRef>jar-with-dependencies</descriptorRef> 
+			<!-- replaced by shade <plugin> <artifactId>maven-assembly-plugin</artifactId>
+				<configuration> <archive> <manifest> <mainClass>org.twak.tweed.TweedFrame</mainClass>
+				<addDefaultImplementationEntries>true</addDefaultImplementationEntries> <addDefaultSpecificationEntries>true</addDefaultSpecificationEntries>
+				</manifest> </archive> <descriptorRefs> <descriptorRef>jar-with-dependencies</descriptorRef>
 				</descriptorRefs> </configuration> </plugin> -->
 
 			<plugin>
@@ -92,6 +91,44 @@
 		</resources>
 	</build>
 
+	<repositories>
+
+		<repository>
+			<id>maven2-repository.dev.java.net</id>
+			<name>Java.net repository</name>
+			<url>http://download.java.net/maven/2</url>
+		</repository>
+
+		<repository>
+			<id>osgeo</id>
+			<name>OSGeo Release Repository</name>
+			<url>https://repo.osgeo.org/repository/release/</url>
+			<snapshots><enabled>false</enabled></snapshots>
+			<releases><enabled>true</enabled></releases>
+		</repository>
+
+		<repository>
+			<id>jcenter</id>
+			<url>https://jcenter.bintray.com</url>
+		</repository>
+
+		<repository>
+			<id>uni-jena.de</id>
+			<url>https://bio.informatik.uni-jena.de/repository/libs-release-oss/</url>
+		</repository>
+
+	</repositories>
+
+	<properties>
+		<java.version>1.8</java.version>
+		<jme3_g>org.jmonkeyengine</jme3_g>
+		<jme3_v>3.3.2-stable</jme3_v>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<geotools.version>19.1</geotools.version>
+		<batik_v>1.10</batik_v>
+	</properties>
+
+
 	<profiles>
 		<profile>
 			<id>release</id>
@@ -112,7 +149,11 @@
 					<artifactId>jutils</artifactId>
 					<version>master-SNAPSHOT</version>
 				</dependency>
-
+				<dependency>
+					<groupId>com.github.twak</groupId>
+					<artifactId>campskeleton</artifactId>
+					<version>master-SNAPSHOT</version>
+				</dependency>
 				<dependency>
 					<groupId>com.github.twak</groupId>
 					<artifactId>siteplan</artifactId>
@@ -121,7 +162,7 @@
 
 				<dependency>
 					<groupId>com.github.twak</groupId>
-					<artifactId>chordatlas</artifactId>
+					<artifactId>mmg</artifactId>
 					<version>master-SNAPSHOT</version>
 				</dependency>
 			</dependencies>
@@ -138,131 +179,35 @@
 				</dependency>
 
 				<dependency>
+					<groupId>org.twak.campskeleton</groupId>
+					<artifactId>campskeleton</artifactId>
+					<version>0.0.1-SNAPSHOT</version>
+				</dependency>
+
+				<dependency>
 					<groupId>org.twak.siteplan</groupId>
 					<artifactId>siteplan</artifactId>
 					<version>0.0.1-SNAPSHOT</version>
 				</dependency>
 
 				<dependency>
-					<groupId>org.twak.chordatlas</groupId>
-					<artifactId>chordatlas</artifactId>
+					<groupId>org.twak.mmg</groupId>
+					<artifactId>mmg</artifactId>
 					<version>0.0.1-SNAPSHOT</version>
 				</dependency>
-
 			</dependencies>
+
 		</profile>
 	</profiles>
 
-	<repositories>
-
-		<repository>
-			<id>maven2-repository.dev.java.net</id>
-			<name>Java.net repository</name>
-			<url>http://download.java.net/maven/2</url>
-		</repository>
-
-		<repository>
-			<id>osgeo</id>
-			<name>Open Source Geospatial Foundation Repository</name>
-			<url>http://download.osgeo.org/webdav/geotools/</url>
-		</repository>
-
-		<repository>
-			<id>jcenter</id>
-			<url>http://jcenter.bintray.com</url>
-		</repository>
-
-	</repositories>
-
-	<properties>
-		<java.version>1.8</java.version>
-		<jme3_g>org.jmonkeyengine</jme3_g>
-		<jme3_v>3.3.2-stable</jme3_v>
-		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-		<geotools.version>19.1</geotools.version>
-		<batik_v>1.10</batik_v>
-	</properties>
-
 	<dependencies>
 
-		<dependency>
-			<groupId>javax.vecmath</groupId>
-			<artifactId>vecmath</artifactId>
-			<version>1.5.2</version>
-		</dependency>
-		
-		<dependency>
-			<groupId>org.geotools</groupId>
-			<artifactId>gt-xml</artifactId>
-			<version>${geotools.version}</version>
-		</dependency>
 
-		<dependency>
-			<groupId>org.geotools</groupId>
-			<artifactId>gt-shapefile</artifactId>
-			<version>${geotools.version}</version>
-		</dependency>
-
-		<dependency>
-			<groupId>org.geotools</groupId>
-			<artifactId>gt-swing</artifactId>
-			<version>${geotools.version}</version>
-			<exclusions>
-				<exclusion>
-					<groupId>it.geosolutions.imageio-ext</groupId>
-					<artifactId>imageio-ext-tiff</artifactId>
-				</exclusion>
-			</exclusions>
-		</dependency>
-
-		<dependency>
-			<groupId>org.geotools</groupId>
-			<artifactId>gt-referencing</artifactId>
-			<version>${geotools.version}</version>
-		</dependency>
-
-		<dependency>
-			<groupId>org.geotools</groupId>
-			<artifactId>gt-epsg-hsql</artifactId>
-			<version>${geotools.version}</version>
-		</dependency>
-
-		<dependency>
-			<groupId>${jme3_g}</groupId>
-			<artifactId>jme3-core</artifactId>
-			<version>${jme3_v}</version>
-		</dependency>
-		<dependency>
-			<groupId>${jme3_g}</groupId>
-			<artifactId>jme3-desktop</artifactId>
-			<version>${jme3_v}</version>
-		</dependency>
-		<dependency>
-			<groupId>${jme3_g}</groupId>
-			<artifactId>jme3-lwjgl</artifactId>
-			<version>${jme3_v}</version>
-		</dependency>
-		<dependency>
-			<groupId>${jme3_g}</groupId>
-			<artifactId>jme3-effects</artifactId>
-			<version>${jme3_v}</version>
-		</dependency>
-		<dependency>
-			<groupId>${jme3_g}</groupId>
-			<artifactId>jme3-terrain</artifactId>
-			<version>${jme3_v}</version>
-		</dependency>
-
-		<dependency>
-			<groupId>com.thoughtworks.xstream</groupId>
-			<artifactId>xstream</artifactId>
-			<version>1.4.10</version>
-		</dependency>
 
 	</dependencies>
 
 	<organization>
-		<name>chordatlas</name>
+		<name>tweedstreets</name>
 		<url>http://geometry.cs.ucl.ac.uk/projects/2017/bigsur/</url>
 	</organization>
 	<name>tweedstreets</name>
