@@ -39,8 +39,10 @@
     <orderEntry type="library" name="Maven: org.apache.xmlgraphics:batik-script:1.10" level="project" />
     <orderEntry type="library" name="Maven: org.apache.xmlgraphics:batik-transcoder:1.10" level="project" />
     <orderEntry type="library" name="Maven: org.apache.xmlgraphics:batik-anim:1.10" level="project" />
+    <orderEntry type="library" name="Maven: org.orbisgis:poly2tri-core:0.1.2" level="project" />
+    <orderEntry type="library" name="Maven: org.slf4j:slf4j-api:1.6.0" level="project" />
     <orderEntry type="module" module-name="campskeleton" />
-    <orderEntry type="library" name="Maven: com.github.twak:jutils:master-b72c04b2ab-1" level="project" />
+    <orderEntry type="library" name="Maven: com.github.twak:jutils:master-44a4fd896b-1" level="project" />
     <orderEntry type="module" module-name="siteplan" />
     <orderEntry type="library" name="Maven: org.jmonkeyengine:jme3-core:3.3.2-stable" level="project" />
     <orderEntry type="library" name="Maven: org.jmonkeyengine:jme3-desktop:3.3.2-stable" level="project" />
@@ -55,7 +57,7 @@
     <orderEntry type="library" scope="RUNTIME" name="Maven: net.java.jinput:jinput-platform:natives-windows:2.0.5" level="project" />
     <orderEntry type="library" scope="RUNTIME" name="Maven: net.java.jinput:jinput-platform:natives-osx:2.0.5" level="project" />
     <orderEntry type="library" name="Maven: org.jmonkeyengine:jme3-effects:3.3.2-stable" level="project" />
-    <orderEntry type="library" name="Maven: com.github.twak:campskeleton:master-8df5b241d5-1" level="project" />
+    <orderEntry type="library" name="Maven: com.github.twak:campskeleton:master-7d92175182-1" level="project" />
     <orderEntry type="module" module-name="mmg" />
     <orderEntry type="library" name="Maven: org.pushing-pixels:radiance-substance:3.5.1" level="project" />
     <orderEntry type="library" name="Maven: org.pushing-pixels:radiance-trident:3.5.1" level="project" />
